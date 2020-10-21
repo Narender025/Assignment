@@ -13,9 +13,13 @@ function App() {
         <div className="container-fluld header-box">
           <div className="container">
             <nav className="navbar navbar-light bg-light">
-              <a className="navbar-brand" href="#">
-                Navbar
-              </a>
+                <a className="navbar-brand" href=""><b>LOGO</b></a>
+                <ul className="nav justify-content-end">
+                <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
+                <li className="nav-item"><a className="nav-link" href="#"> My Portfolio</a></li>
+                <li className="nav-item"><a className="nav-link" href="#">Clients</a></li>
+                <li className="nav-item"><a className="nav-link nav-link-last" href="#">Get in Touch</a></li>
+                </ul>
             </nav>
           </div>
         </div>

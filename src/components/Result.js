@@ -1,7 +1,11 @@
 import React from "react";
+import { itemClicked } from "../redux/Action";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import $ from "jquery";
 
 const Result = () => {
+  const dispatch = useDispatch();
   const clients = useSelector((state) =>
     state.client_list.map((client_list) => {
       return {
@@ -11,9 +15,19 @@ const Result = () => {
     })
   );
 
+  const handleClick = (event) => {
+    let clintID = event.target.value; 
+    dispatch(itemClicked(clintID));
+  }
+
   const renderClient = (client) => {
     return (
       <div class="alert alert-warning" role="alert">
+       
+        <button type="button" class="close" value= {client.id} onClick={handleClick}>
+          &times;
+        </button>
+       
         {client.name}
       </div>
     );
@@ -34,7 +48,6 @@ const Result = () => {
             <section className="section-preview">
               {renderClients(client.clients)}
             </section>
-            <hr />
           </div>
         );
       } else {
@@ -45,8 +58,11 @@ const Result = () => {
 
   return (
     <div className="col-md-6 my-4">
-      <div className="form-cards">
-        <div className="container my-4">{renderList()}</div>
+      <div className="col-div">
+        <div className="form-cards">
+          <div className="container my-4">{renderList()}</div>
+          {/* <div className="container my-4 result"><p>No value selected</p></div> */}
+        </div>
       </div>
     </div>
   );

@@ -44,7 +44,6 @@ const Form_components = () => {
             <section className="section-preview">
               {renderClients(country.clients)}
             </section>
-            <hr />
           </div>
         );
       } else {
@@ -54,10 +53,11 @@ const Form_components = () => {
   };
 
   return (
-    <div className="col-md-6 my-4">
+    <div className="col-md-6 my-4 ">
+      <div className="col-div">
       <div className="form-cards">
         <section className="section-preview">{renderList()}</section>
-        <hr />
+      </div>
       </div>
     </div>
   );

@@ -3,8 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
+  color: #ff00ff; 
+  font-size: 10px;
+  
+  font-family: sans-serif, Helvetica, Arial;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,8 +29,17 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: darkviolet;
+  font-family: sans-serif, Helvetica, Arial;
+  font-size: 10px;
 }
+
+.App-link: hover {
+  color : darkviolet;
+  font-family: sans-serif, Helvetica, Arial;
+  font-size: 40px; 
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +49,7 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
